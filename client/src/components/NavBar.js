@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Menu } from 'semantic-ui-react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { handleLogout } from '../reducers/user';
+import { handleLogout } from '../actions/auth'
 
 class NavBar extends Component {
   rightNavs = () => {
@@ -17,7 +17,7 @@ class NavBar extends Component {
           />
         </Menu.Menu>
       );
-    }
+    }else{
     return (
       <Menu.Menu position='right'>
         <Link to='/register'>
@@ -29,6 +29,7 @@ class NavBar extends Component {
       </Menu.Menu>
     );
   }
+}
 
   render() {
     return (
@@ -44,7 +45,7 @@ class NavBar extends Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return { user: state.user };
 };
 

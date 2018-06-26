@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import { Header } from 'semantic-ui-react';
 
-class Home extends Component {
-  render() {
-    return (
-      <Header as='h1' textAlign='center'>Home Component</Header>
-    );
-  }
-}
-
-export default Home;
+const Home = () => (
+  <Header textAlign="center" as="h3">Devise Auth App</Header>
+ )
+ 
+ export default Home;

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   namespace :api do
-    get 'store/index'
-    get 'store/update'
+    get 'app/index'
+    get 'app/update'
   end
   mount_devise_token_auth_for 'User', at: 'api/auth'
   namespace :api do
